@@ -36,12 +36,12 @@ pip install -r requirements.txt
 ```
 
 ## 📐 Robot Parameters
-7 revolute joints
+7 revolute joints \n
 Modified Denavit-Hartenberg convention
 
 ## 📊 Output
-Joint angles over time
-Trajectory tracking plots
+Joint angles over time \n 
+Trajectory tracking plots \n 
 Torque input over time
 Energy analysis (optional)
 
