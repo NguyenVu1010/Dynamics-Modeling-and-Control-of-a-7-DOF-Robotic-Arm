@@ -45,23 +45,25 @@ cd ~/my_ws
 catkin_make
 #3. Source the setup file
 source devel/setup.bash
-#▶️ Running the Robot Nodes
-roslaunch seven_dof_robot control.launch
+
 #📦 Dependencies
 sudo apt update
 rosdep install --from-paths src --ignore-src -r -y
 pip install -r requirements.txt
+
+#▶️ Running the Robot Nodes
+roslaunch seven_dof_robot control.launch
 ```
 ## 📐 Robot Parameters
 ```bash
-7 revolute joints 
-Modified Denavit-Hartenberg convention
+- 7 revolute joints 
+- Modified Denavit-Hartenberg convention
 ```
 ## 📊 Output
 ```bash
-Joint angles over time  
-Trajectory tracking plots  
-Torque input over time
-Energy analysis (optional)
+- Joint angles over time  
+- Trajectory tracking plots  
+- Torque input over time
+- Energy analysis 
 ``
 
