@@ -18,31 +18,50 @@ The main goals of this project include:
 ## 📁 Project Structure
 
 ```bash
-.
-├── dynamics/             # Symbolic modeling of dynamics (e.g., Lagrange equations)
-├── kinematics/           # FK / IK scripts
-├── control/              # Control algorithms: PD, computed torque, etc.
-├── simulation/           # Simulations using numerical integrators
-├── utils/                # Common helper functions
-├── urdf/    # URDF, DH parameters, etc.
-├── plots/                # Saved plots and figures
-├── main.py               # Entry point to run simulation
-└── README.md             # Project documentation
+cobot30_5/
+├── config/             # Cấu hình controller, joint limits,...
+├── data/               # Dữ liệu mô phỏng, lộ trình, v.v.
+├── launch/             # File .launch để chạy node/robot
+├── meshes/             # File mesh 3D (dạng .stl, .dae) cho URDF
+├── scripts/            # Node Python (.py)
+├── urdf/               # Mô hình robot URDF/Xacro
+├── worlds/             # Môi trường mô phỏng Gazebo
+├── CMakeLists.txt      # Cấu hình build cho catkin
+├── package.xml         # Khai báo package ROS
+└── requirements.txt    # Thư viện Python cần cài
+
 ```
 ## ⚙️ Dependencies
 ### Make sure you have Python 3.8+ and the following packages:
-``` Bash
+
+## 🚀 Installation and Build Instructions
+```bash
+#1. Clone the repository into a Catkin workspace
+mkdir -p ~/my_ws/src
+cd ~/my_ws/src
+git clone https://github.com/your_username/your_repo.git
+#2. Build the workspace
+cd ~/my_ws
+catkin_make
+#3. Source the setup file
+source devel/setup.bash
+#▶️ Running the Robot Nodes
+roslaunch seven_dof_robot control.launch
+#📦 Dependencies
+sudo apt update
+rosdep install --from-paths src --ignore-src -r -y
 pip install -r requirements.txt
 ```
-
 ## 📐 Robot Parameters
-7 revolute joints \n
+```bash
+7 revolute joints 
 Modified Denavit-Hartenberg convention
-
+```
 ## 📊 Output
-Joint angles over time \n 
-Trajectory tracking plots \n 
+```bash
+Joint angles over time  
+Trajectory tracking plots  
 Torque input over time
 Energy analysis (optional)
-
+``
 
