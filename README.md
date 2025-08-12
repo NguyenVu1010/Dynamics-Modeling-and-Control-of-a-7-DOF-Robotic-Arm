@@ -14,7 +14,7 @@ The main goals of this project include:
 - Building a modular structure for future integration with ROS/Gazebo or hardware
 
 ---
-!(gazebo)(images/Screenshot from 2025-08-12 15-00-30.png)
+![gazebo](images/Screenshot from 2025-08-12 15-00-30.png)
 ## 📁 Project Structure
 
 ```bash
